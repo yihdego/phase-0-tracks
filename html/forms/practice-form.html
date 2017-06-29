@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name="Coffee order" action="success.html" method="post">
+ <fieldset>
+    <div>
+      <label>Customer Name:</label>
+      <input type="text" name="Name" placeholder="Hello special customer">
+    </div>
+  </fieldset>
+  </fieldset>
+ <fieldset>
+    <legend> Coffee Size </legend>
+    <!-- The second value will be selected initially -->
+<select name="Coffee Size"> <!--Supplement an id here instead of using 'name'-->
+  <option value="value1">Small</option> 
+  <option value="value2" selected>Medium</option>
+  <option value="value3">Large</option>
+</select>
+</div>
+</fieldset>
+<fieldset>
+<div>	
+	<legend> Milk </legend>
+    <p><label> <input type=radio name=milk value="Non-Fat">Non-Fat  </label></p>
+    <p><label> <input type=radio name=milk value="Milk"> Milk </label></p>
+    <p><label> <input type=radio name=milk value="Whole Milk"> Whole Milk </label></p>
+   </fieldset>
+  <fieldset>
+    <div>
+      <label>Coffee order:</label>
+      <textarea name="Coffee order"
+   rows="5" cols="50">What's order</textarea>
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+  </fieldset>
+  <button type="submit">Order coffee</button>
+</form>
+
+
+</body>
+</html>
