@@ -1,0 +1,14 @@
+.sillyoctopus {
+	position: relative;
+	z-index: -1
+}
+.octopus {
+	z-index: -2;
+}
+.hat {
+	position: absolute;
+	top: 30px;
+}
+.glasses {
+	position: absolute;
+}

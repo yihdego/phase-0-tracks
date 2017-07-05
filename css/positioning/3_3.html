@@ -2,13 +2,29 @@
 <html>
 <head>
 	<title>Octopus in Clothes</title>
-	<link rel="stylesheet" type="text/css" href="octopus.css">
+<style>
+	.octopus {
+		position: absolute;
+		top: 80px;
+		left: 40px;
+		z-index:-1}
+	.hat {position: absolute;
+		top: 10px;
+		left: 20px;
+		z-index: +1
+	}
+	.glasses {
+		position: absolute;
+		top: 180px;
+		left: 80px;
+	z-index: +0}
+</style>
 </head>
 <body>
-	<div class="sillyoctopus">
-		<div id="octopus"><img src="octopus.png"></div>
-		<div id="hat"><img src="hat.png"></div>
-		<div id="glasses"><img src="glasses.png"></div>
-	</div>
+		<div class="octopus" ="octopus"><img src="octopus.png"></div>
+		
+		<div class="hat"><img src="hat.png"></div>
+		
+		<div class="glasses"><img src="glasses.png"></div>
 </body>
 </html>
