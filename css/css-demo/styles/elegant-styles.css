@@ -61,6 +61,6 @@ h1#resume-title {
 an element of a certain class (the p
 is nested inside the contact-info section) */
 
-#contact-info p {
-  line-height: .8;
+#contact-info {
+  font-size: .8em
 }

@@ -13,3 +13,11 @@
 .list {
   font-size: .8em;
 }
+
+.job:first-letter {
+  font-size: 5em;
+}
+
+section > h3 {
+	color: red;
+}
