@@ -31,17 +31,17 @@ figcaption {
   text-align: right;
 }
 body {
-  width: 960px;
+max-width: : 960px;
 }
 
 
 main {
-  width: 756px;
+  width: 70%;
   display: inline-block;
   vertical-align: 
 }
 #external-links {
-  width: 200px;
+  min-width: 20%;
   display: inline-block;
   vertical-align: top;
 }
