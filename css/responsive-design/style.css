@@ -33,3 +33,15 @@ figcaption {
 body {
   width: 960px;
 }
+
+
+main {
+  width: 756px;
+  display: inline-block;
+  vertical-align: 
+}
+#external-links {
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
