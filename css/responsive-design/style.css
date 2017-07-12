@@ -45,3 +45,16 @@ main {
   display: inline-block;
   vertical-align: top;
 }
+
+@media screen and (max-width: 975px) {
+  body {
+    font-size: .8em;
+  }
+}
+@media screen and (max-width: 600px) {
+  #external-links {
+    display: block;
+    vertical-align: text-top;
+    width: 100%;
+  }
+}
