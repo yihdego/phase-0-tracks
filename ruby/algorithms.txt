@@ -1,0 +1,18 @@
+Instructions for using the elevator
+- Decide which floor you are going to
+	- Determine if going up or down
+		-Press corrosponding button for up or down once decision made
+	- Step into elevator when doors open. Turn around to face control panal
+		- Find button that matches destination
+			- Press button
+				- Unless another passenger has already pressed button
+	- Ride elevator
+		- When you reach desitantion exit elevator.
+
+Instructions for waking up
+	- Alarm ringing
+		- Find alarm
+			- Either snooze for 5 more minutes if tired
+			- Or stop alarm and get out of bed
+		- Sleep through alarm
+	- Occassionaly wake up before alarm rings in which case browse Reddit
