@@ -22,3 +22,9 @@ if resp_health == "yes"
 else
 	immortality = false
 end
+
+if resp_garlic == "yes"
+	allergic = no
+else
+	allergic = yes
+end
