@@ -24,7 +24,13 @@ else
 end
 
 if resp_garlic == "yes"
-	allergic = no
+	allergic = false
 else
-	allergic = yes
+	allergic = true
+end
+
+if (lied_age == false) && (allergic == false)
+	puts "probably werewolf"
+else
+	puts "Vampire!"
 end
