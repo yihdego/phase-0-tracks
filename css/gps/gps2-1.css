@@ -1,0 +1,20 @@
+body {
+  font-family: Helvetica;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrS060vpBVNcVKqJ1PV960-mmsl27HtWGf0DRmqr-QFDFPfL4LFrOgf3A);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.column-1 {
+  display: inline-block;
+  vertical-align: top;
+  background-color: red;
+  max-width: 49%;
+  min-width: 48%;
+}
+.column-2 {
+  display: inline-block;
+  vertical-align: top;
+  background-color: blue;
+  max-width: 49%;
+  min-width: 48%;
+}
