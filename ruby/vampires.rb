@@ -42,7 +42,7 @@ while processed_applicants < goal
 		puts "Almost certainly a vampire."
 	elsif lied_age == true && (allergic == true || immortality == false) || (allergic == false || immortality == true)
 		puts "Probably a vampire."
-	elsiflied_age == false && allergic == false || immortality == false
+	elsif lied_age == false && allergic == false || immortality == false
 		puts "Probably not a vampire."
 	elsif
 		puts "Results inconclusive."
