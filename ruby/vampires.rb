@@ -29,8 +29,13 @@ else
 	allergic = true
 end
 
-if (lied_age == false) && (allergic == false)
-	puts "probably werewolf"
+if lied_age == false && allergic == false || immortality == false
+	puts "Probably not a vampire."
+elsif lied_age == true && allergic == false || immortality == true
+	puts " Probably a vampire."
+elsif lied_age == true && allergic == true && immortality == true
+	puts "Almost certainly a vampire."
+elsif resp_name == "Drake Cula" || "Tu Fang"
+	puts "Definitely a vampire."
 else
-	puts "Vampire!"
-end
+	puts "Results inconclusive."
