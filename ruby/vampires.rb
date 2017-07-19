@@ -17,15 +17,15 @@ else
 	lied_age = true
 end
 
-if resp_health == "yes"
+if resp_health == "yes" || resp_health == "Yes"
 	immortality = true
-else
-	immortality = false
+else resp_health == "no" || resp_health == "No"
+	immortality == false
 end
 
-if resp_garlic == "yes"
+if resp_garlic == "yes" || resp_garlic == "Yes"
 	allergic = false
-else
+else resp_garlic == "no" || resp_garlic == "No"
 	allergic = true
 end
 
@@ -35,7 +35,7 @@ elsif lied_age == true && allergic == false || immortality == true
 	puts " Probably a vampire."
 elsif lied_age == true && allergic == true && immortality == true
 	puts "Almost certainly a vampire."
-elsif resp_name == "Drake Cula" || "Tu Fang"
+elsif resp_name == "Drake Cula"
 	puts "Definitely a vampire."
 else
 	puts "Results inconclusive."
