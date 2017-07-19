@@ -39,3 +39,4 @@ elsif resp_name == "Drake Cula" || "Tu Fang"
 	puts "Definitely a vampire."
 else
 	puts "Results inconclusive."
+end
