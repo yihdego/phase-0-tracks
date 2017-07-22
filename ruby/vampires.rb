@@ -16,7 +16,16 @@ while processed_applicants < goal
 	resp_garlic = gets.chomp
 	puts "Would you like to enroll in the company’s health insurance?"
 	resp_health = gets.chomp
+	puts "List all the allergies you have. When finished type (done)"
+	allergies = nil
+	until allergies == "done" || allergies == "sunshine"
+	allergies = gets.chomp
+	end
 
+	if allergies == "sunshine"
+		puts "Probably a vampire"
+	else allergies == "done"
+	end
 
 	if year_born == (2017-age)
 		lied_age = false
@@ -50,12 +59,13 @@ while processed_applicants < goal
 		puts "Definitely a vampire."
 	when lied_age == true && (allergic == true && immortality == true)
 		puts "Almost certainly a vampire."
-	when lied_age == true && (allergic == true || immortality == false) || (allergic == false || immortality == true)
+	when lied_age == true && (allergic == true && immortality == false) || (allergic == false && immortality == true)
 		puts "Probably a vampire."
 	when lied_age == false && allergic == false || immortality == false
 		puts "Probably not a vampire."
 	else
 		puts "Results inconclusive."
 	end
+
 	processed_applicants +=1
 end
