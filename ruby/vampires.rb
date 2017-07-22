@@ -36,15 +36,25 @@ while processed_applicants < goal
 		allergic = true
 	end
 
-	if resp_name == "Drake Cula"
+	case
+	when resp_name == "Drake Cula"
+		Definitelyvampire =true
+	when resp_name == "Tu Fang"
+		Definitelyvampire = true
+	else
+		Definitelyvampire = false
+	end
+
+	case 
+	when Definitelyvampire
 		puts "Definitely a vampire."
-	elsif lied_age == true && (allergic == true && immortality == true)
+	when lied_age == true && (allergic == true && immortality == true)
 		puts "Almost certainly a vampire."
-	elsif lied_age == true && (allergic == true || immortality == false) || (allergic == false || immortality == true)
+	when lied_age == true && (allergic == true || immortality == false) || (allergic == false || immortality == true)
 		puts "Probably a vampire."
-	elsif lied_age == false && allergic == false || immortality == false
+	when lied_age == false && allergic == false || immortality == false
 		puts "Probably not a vampire."
-	elsif
+	else
 		puts "Results inconclusive."
 	end
 	processed_applicants +=1
