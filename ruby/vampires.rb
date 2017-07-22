@@ -59,7 +59,7 @@ while processed_applicants < goal
 		puts "Almost certainly a vampire."
 	when lied_age == true && (allergic == true && immortality == false) || (allergic == false && immortality == true)
 		puts "Probably a vampire."
-	when lied_age == false && allergic == false || immortality == false
+	when !lied_age == true && allergic == false || immortality == false
 		puts "Probably not a vampire."
 	else
 		puts "Results inconclusive."
