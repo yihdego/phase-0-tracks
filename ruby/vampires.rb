@@ -25,45 +25,49 @@ while processed_applicants < goal
 	if allergies == "sunshine"
 		puts "Probably a vampire"
 	else allergies == "done"
-		if year_born == (2017-age)
-		lied_age = false
-	else
-		lied_age = true
-	end
+		
+		case 
+		when (2017-age) >= 100
+			lied_age = true
+		when year_born == (2017-age)
+			lied_age = false
+		when
+			lied_age = true
+		end
 
-	if resp_health == "yes" || resp_health == "Yes"
-		immortality = false
-	else resp_health == "no" || resp_health == "No"
-		immortality = true
-	end
+		if resp_health == "yes" || resp_health == "Yes"
+			immortality = false
+		else resp_health == "no" || resp_health == "No"
+			immortality = true
+		end
 
-	if resp_garlic == "yes" || resp_garlic == "Yes"
-		allergic = false
-	else resp_garlic == "no" || resp_garlic == "No"
-		allergic = true
-	end
+		if resp_garlic == "yes" || resp_garlic == "Yes"
+			allergic = false
+		else resp_garlic == "no" || resp_garlic == "No"
+			allergic = true
+		end
 
-	case
-	when resp_name == "Drake Cula"
-		Definitelyvampire =true
-	when resp_name == "Tu Fang"
-		Definitelyvampire = true
-	else
-		Definitelyvampire = false
-	end
+		case
+		when resp_name == "Drake Cula"
+			Definitelyvampire =true
+		when resp_name == "Tu Fang"
+			Definitelyvampire = true
+		else
+			Definitelyvampire = false
+		end
 
-	case 
-	when Definitelyvampire
-		puts "Definitely a vampire."
-	when lied_age == true && (allergic == true && immortality == true)
-		puts "Almost certainly a vampire."
-	when lied_age == true && (allergic == true && immortality == false) || (allergic == false && immortality == true)
-		puts "Probably a vampire."
-	when !lied_age == true && allergic == false || immortality == false
-		puts "Probably not a vampire."
-	else
-		puts "Results inconclusive."
-	end
+		case 
+		when Definitelyvampire
+			puts "Definitely a vampire."
+		when lied_age == true && (allergic == true && immortality == true)
+			puts "Almost certainly a vampire."
+		when lied_age == true && (allergic == true && immortality == false) || (allergic == false && immortality == true)
+			puts "Probably a vampire."
+		when !lied_age == true && allergic == false || immortality == false
+			puts "Probably not a vampire."
+		else
+			puts "Results inconclusive."
+		end
 	end
 
 	
