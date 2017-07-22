@@ -25,9 +25,7 @@ while processed_applicants < goal
 	if allergies == "sunshine"
 		puts "Probably a vampire"
 	else allergies == "done"
-	end
-
-	if year_born == (2017-age)
+		if year_born == (2017-age)
 		lied_age = false
 	else
 		lied_age = true
@@ -66,6 +64,10 @@ while processed_applicants < goal
 	else
 		puts "Results inconclusive."
 	end
+	end
+
+	
 
 	processed_applicants +=1
 end
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
