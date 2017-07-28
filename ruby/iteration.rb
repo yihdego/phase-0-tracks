@@ -54,3 +54,17 @@ puts tv_res.has_key?("Sanyo")
 
 a = [1,2,3,4]
 a.select {|n|n >2}
+
+drink_sizes = [16, 20, 32, 48, 96, 128]
+p drink_sizes.take_while{ |oz| oz < 48}
+
+drink_sizes = {
+  Small: 16,
+  Medium: 20,
+  Large: 32,
+  XLarge: 48,
+  DoubleXLarge: 96,
+  Gallon: 128
+}
+
+p drink_sizes.keep_if{ |key, value| value < 48}
