@@ -8,3 +8,8 @@ alias_name = name.split (' ')
 puts [alias_name[1],alias_name[0]]
 secret_name = [alias_name[1]+" "+alias_name[0]]
 puts secret_name
+
+letters = alias_name[1].split('')
+letter
+ alias_name[0].split('')
+
