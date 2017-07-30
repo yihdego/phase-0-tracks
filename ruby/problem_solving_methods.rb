@@ -14,3 +14,17 @@ end
 
 search_array(test1, 89)
 search_array(test1,9)
+
+
+def fib(y)
+
+array = [0,1]
+until array.length == y
+second = array.at(array.length-2)
+something = array.last + second
+array = array << something
+end
+p array.last
+end
+fib (6)
+fib (100)
