@@ -28,3 +28,25 @@ p array.last
 end
 fib (6)
 fib (100)
+
+def bubble_sort(array)
+  n = array.length
+  loop do
+    swapped = false
+
+    (n-1).times do |i|
+      if array[i] > array[i+1]
+        array[i], array[i+1] = array[i+1], array[i]
+        swapped = true
+      end
+    end
+
+    break if not swapped
+  end
+
+  array
+end
+
+
+test = [40,20,10,0]
+p bubble_sort(test)
