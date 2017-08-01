@@ -7,9 +7,6 @@ class Puppy
 
 end
 
-buddy = Puppy.new
-
-p buddy.fetch("ball")
 
 def speak(repeat)
 	index = 0
@@ -19,22 +16,34 @@ def speak(repeat)
 	end
 end
 
-speak(2)
+
 
 def roll_over
 	puts "rolls over"
 end
 
-roll_over
+
 
 def dog_years(human_years)
 	(human_years)*7
 end
 
-dog_years(5)
+
 
 def play_dead
 	puts "lies down and rolls on back"
 end
 
+
+
+def initialize
+	puts "Initializing new puppy instance ..."
+end
+
+buddy = Puppy.new
+
+p buddy.fetch("ball")
+speak(2)
+roll_over
+dog_years(5)
 play_dead
