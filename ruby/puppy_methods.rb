@@ -11,7 +11,7 @@ class Puppy
 			puts "woof"
 			index += 1
 		end
-
+	end
 
 	def roll_over
 		puts "rolls over"
@@ -41,8 +41,6 @@ buddy.play_dead
 
 
 
-end
-
 class Developer
 
   def pseudocode
@@ -57,33 +55,17 @@ class Developer
     puts "Initialize programer instance"
   end
 end
-guillermo = Developer.new
-amanuel = Developer.new
-dbc = [guillermo, amanuel]
-  # Cody = "Cody"
-  #   index = 0
-  #   while index < 5
-  #   Cody = Developer.new  
-  #   dbc['Chicago'].push(Cody) 
-  #   index += 1
-  # end
+
+dbc = []
+
+    index = 0
+    while index < 50
+    student = Developer.new  
+    dbc.push(student) 
+    index += 1
+  	end
    
 dbc.each do |programer|
 programer.pseudocode
 programer.code 
-end 
-# dbc = {
-#   'Chicago' => []
-# }
-#   programer = "John Doe"
-#     index = 0
-#     while index < 5
-#     programer[index]= Developer.new 
-     
-#     index += 1
-#   end
- 
-# #Driver Code 
-#   Guillermo = Developer.new 
-#   Guillermo.pseudocode
-#   Guillermo.code
+end
