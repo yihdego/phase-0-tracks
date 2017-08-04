@@ -1,17 +1,26 @@
-require_relative 'TodoList'
+class TodoList
+	def get_items
+	$todo = ["do the dishes", "mow the lawn"]
+	end
+todo = get_items
+	def add_item(z)
+	$todo += [z]
+	end
+end
 
 describe TodoList do
-  let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
+  # let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
 
   it "stores the list items given on initialization" do
-  	# list = TodoList.new
-    expect(list.get_items("do the dishes","mow the lawn")).to eq ["do the dishes", "mow the lawn"]
+  	list = TodoList.new
+    expect(list.get_items).to eq ["do the dishes", "mow the lawn"]
   end
 
-  # it "adds an item to the list" do
-  #   list.add_item("mop")
-  #   expect(list.get_items).to eq ["do the dishes", "mow the lawn", "mop"]
-  # end
+  it "adds an item to the list" do
+  	list = TodoList.new
+    list.add_item("mop")
+    expect(list.get_items).to eq ["do the dishes", "mow the lawn", "mop"]
+  end
 
   # it "deletes an item" do
   #   list.delete_item("do the dishes")
