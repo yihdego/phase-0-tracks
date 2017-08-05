@@ -1,7 +1,7 @@
 class Santa
 	attr_reader :ethnicity
 	attr_accessor :age, :gender
-	
+
 	def initialize(gender,ethnicity)
 		@gender = gender
 		@ethnicity = ethnicity
@@ -27,10 +27,20 @@ class Santa
 end
 
 
-santa = Santa.new("Female", "Hispanic")
-santa.celebrate_birthday = 1
-santa.get_mad_at = "Vixen"
-p santa
-santa.gender = "undisclosed"
-p santa.age
-p santa.ethnicity
+# santa = Santa.new("Female", "Hispanic")
+# santa.celebrate_birthday = 1
+# santa.get_mad_at = "Vixen"
+# p santa
+# santa.gender = "undisclosed"
+# p santa.age
+# p santa.ethnicity
+
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+
+unique_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+unique_santa.celebrate_birthday = rand(0..140)
+p unique_santa
+
