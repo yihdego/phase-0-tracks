@@ -6,15 +6,19 @@
 // code
 function reverse(stuff) {
 var string = stuff;
-var length = string.length
-var reversed = ""
+var length = string.length;
+var reversed = "";
 for (var i = length; i > 0; i-=1){
-	(reversed += string[i-1]);
-}
-console.log(reversed)
+	(reversed += string[i-1]);}
+	return reversed;
 }
 
 
-// driver code
-reverse("Hello")
-reverse("Amanuel")
+// // driver code
+var hello = (reverse("Hello"));
+// var Amanuel = (reverse("Amanuel"));
+
+if (1 == 1) {
+	console.log(hello);
+}else{
+	console.log("oops");}
