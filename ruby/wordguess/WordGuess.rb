@@ -1,8 +1,3 @@
-# This assignment is an example why waiting until the last day is a bad idea
-# Week 5's hashes still dont make sense to me and I dont catch the office hours whenever I'm doing these assignments
-# I ended up using only arrays but i felt an optimal solution probably involved hashes
-# I couldn't get the loops to work the way I wanted to before running out of time.
-
 class GuessWord
   attr_accessor :puzzle
   attr_accessor :word
@@ -12,8 +7,6 @@ class GuessWord
   def initialize(input)
     @word = input
     @blanks = []
-    @letter = nil
-    @is_done = false
     @guesses = word.length + 2
     @puzzle = []
     @guess_count = 0
@@ -28,28 +21,16 @@ class GuessWord
     end
     @blanks = blanks.join
   end
-  # def check_guess
-  #   @guess_count += 1
-  #   if @puzzle == @guess
-  #     @is_done = true
-  #   else
-  #     false
-  #   end
-  # end
   def letter_locator(new_letter)
-    game = @word.split('')
+    user_guess = @word.split('')
     index = 0
     while index < @word.length
-      if game.at(index) == new_letter
-        guess_letter = true
+      if user_guess.at(index) == new_letter
         puzzle.delete_at(index)
         puzzle.insert(index, new_letter)
-        p puzzle
+        p puzzle.join
         index += 1
       else
-        guess_letter = false
-        @guess_count += 1
-        puts "wrong guess again"
         index += 1
       end
     end
@@ -58,10 +39,26 @@ end
 
 # User Input
 puts "Player 1 give me a word"
-player1word = gets.chomp
+player1word = gets.chomp.downcase
 game = GuessWord.new(player1word)
 game.blanks = game.word
 game.puzzle = game.blanks.split(' ')
-puts "Player 2 guess #{game.guesses} times what letters are in this patter (#{game.blanks})"
-guess = gets.chomp
-game.letter_locator(guess)
+# puts "Player 2 guess #{game.guesses} times what letters are in this patter (#{game.blanks})"
+puts "Player 2 guess #{game.guesses} times what letters are in this pattern (#{game.puzzle.join})"
+while player1word != game.puzzle.join
+    guess = gets.chomp
+    if player1word.include?(guess) == true
+      game.letter_locator(guess)
+    elsif
+      game.guess_count+1 == game.guesses
+      break
+    else
+      game.guess_count += 1
+      puts "wrong, you've guessed #{game.guess_count} out of #{game.guesses}"
+    end
+  end
+if player1word == game.puzzle.join
+puts "congratulations"
+else
+puts "You've lost."
+end
