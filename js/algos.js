@@ -61,7 +61,7 @@ return word;
 function array(x){
 	var array = [];
 	for (var i = 0; i < x ; i ++){
-	array += randomword();
+	array.push(randomword());
 }
 return array;
 }
@@ -71,3 +71,9 @@ console.log(longest(["long phrase", "longest phrase", "longer phrase"]))
 are_they_same(Steven, Tamir);
 console.log(randomword());
 console.log(array(3));
+
+// Add driver code that does the following 10 times:
+// generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+var proof = array(10);
+console.log(proof);
+console.log(longest(proof));
