@@ -57,9 +57,15 @@ class VirusPredictor
     end
 
     puts " and will spread across the state in #{speed} months.\n\n"
-
   end
+end
 
+# The method needs to be outside of the class so that you can call a method for all the data, because an instance is for a single state.
+def state_report
+  STATE_DATA.each do |states, population_density, population|
+  states = VirusPredictor.new(states, STATE_DATA[states][:population_density], STATE_DATA[states][:population])
+  states.virus_effects
+  end
 end
 
 #=======================================================================
@@ -80,6 +86,18 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
+state_report
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# You can use a hash rocket to set key, value pair or the colon and thats helpful when your data key is labeled the same.
+# What does require_relative do? How is it different from require?
+# Require by itself is a stronger scope where require relative will grab your file form the same directory
+# What are some ways to iterate through a hash?
+# Instead of [array].each you can use {hash}.each_pair or {hash}.each_key
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# Unable to do this by myself, seperated with my pair to complete module cause of time constraints
+# What concept did you most solidify in this challenge?
+# Working with nested data structures was something I was confused with and this challenge helped me understand how to access the data I needed
