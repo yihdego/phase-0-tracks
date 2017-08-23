@@ -5,3 +5,13 @@ sqlite> SELECT * FROM reviews INNER JOIN businesses ON reviews.business_id = bus
 2|3|Too crowded|2|2|2|Amir's Towing|2|Mandy|Kaling
 sqlite>
 3.
+sqlite> SELECT users.first_name, businesses.name, reviews.stars, reviews.comment FROM reviews INNER JOIN businesses ON reviews.business_id = businesses.id
+   ...> INNER JOIN users ON reviews.user_id = users.id;
+Bradford|The Beagle Nightclub|5|Nice staff
+Mandy|Amir's Towing|3|Too crowded
+sqlite>
+4.
+sqlite> SELECT * FROM reviews INNER JOIN businesses on reviews.business_id = businesses.id
+   ...> INNER JOIN users ON reviews.user_id = users.id
+   ...> WHERE businesses.name = "Amir's Towing";
+2|3|Too crowded|2|2|2|Amir's Towing|2|Mandy|Kaling
