@@ -1,0 +1,40 @@
+Display the information in one table (either table is fine).
+sqlite> SELECT * FROM participants;
+1|Ann|yes|1|2
+2|Xiao|yes|2|4
+3|Carolyne|no|1|1
+4|Tressa|yes|2|1
+5|Roxy|no|1|5
+6|Neal|yes|2|2
+7|Fidelia|no|1|6
+Update an item that meets some condition (you can choose a condition that makes sense).
+sqlite> UPDATE participants
+   ...> set cone="no" WHERE name="Xiao";
+Display the information in both tables using one query.
+sqlite> SELECT * FROM participants, ice_cream WHERE participants.ice_cream_id = ice_cream.id;
+1|Ann|yes|1|2|2|chocolate
+2|Xiao|no|2|4|4|cookies and cream
+3|Carolyne|no|1|1|1|vanilla
+4|Tressa|yes|2|1|1|vanilla
+5|Roxy|no|1|5|5|mint
+6|Neal|yes|2|2|2|chocolate
+7|Fidelia|no|1|6|6|other
+sqlite>
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+sqlite> SELECT participants.name, ice_cream.name FROM participants JOIN ice_cream ON participants.ice_cream_id = ice_cream.id;
+Ann|chocolate
+Xiao|cookies and cream
+Carolyne|vanilla
+Tressa|vanilla
+Roxy|mint
+Neal|chocolate
+Fidelia|other
+Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> DELETE FROM ice_cream WHERE name = "strawberry";
+sqlite> SELECT * FROM ice_cream;
+1|vanilla
+2|chocolate
+4|cookies and cream
+5|mint
+6|other
+sqlite>
