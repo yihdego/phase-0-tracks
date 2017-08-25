@@ -1,0 +1,4 @@
+2.
+Linux is opensource, meaning the license is available to download for free. Also they allow people to customize and rerelease their code using their own enchancements and are open to enchancements from the community. They also keep the program purposely light, trying not to bloat it with applications one might think are standard but for example you wouldn't need when running a VPN.
+3.
+VPS are services provided by internet company that allow consumers to host web services. For example I might want to make a website of all my DBC content that I helped make. Setting up a dedicated server would be impressive but not practical if I dont need such equipment long term so for a monthly fee i can pay a VPS to host me on a virtual machine and they provide the software on hand to boot.
